@@ -36,7 +36,7 @@
 </head>
 <body>
 
-<section class="section" style="padding-top: 0px; padding-bottom: 0px;">
+<!-- <section class="section" style="padding-top: 0px; padding-bottom: 0px;">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column has-text-centered">
@@ -44,28 +44,28 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <section class="hero">
   <div class="hero-body" style="padding-top: 0; padding-bottom: 30px;">
     <div class="container  is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title publication-title" style="font-size: 2.5rem; line-height: 1.4;">LeVo 2: Enhancing Musicality and Controllability via Multi-Stage Progressive Post-Training</h1>
+          <h1 class="title publication-title" style="font-size: 2.0rem; line-height: 1.4;">LeVo 2: Stable and Melodious Song Generation via Hierarchical Representation Modeling and Progressive Post-Training </h1>
         </div>
       </div>
     </div>
-    <div class="image-container" style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-top: 0.75rem;">
+    <div class="image-container" style="display: flex; justify-content: center; align-items: center; gap: 1.0rem; margin-top: 0.75rem;">
 			<div>
-				<img src="./static/logo_tencent.png" alt="Tencent" style="height: 100px; width: auto;">
+				<img src="./static/logo_tencent.png" alt="Tencent" style="height: 80px; width: auto;">
 			</div>
 			<div>
-				<img src="./static/logo_hcsi.png" alt="HCSI" style="height: 100px; width: auto;">
+				<img src="./static/logo_hcsi.png" alt="HCSI" style="height: 80px; width: auto;">
 			</div>
 		</div>
   </div>
 
-  <div class="has-text-centered" style="margin-top: 0.5rem; padding-bottom: 30px;">
+  <div class="has-text-centered" style="margin-top: 0rem; padding-bottom: 20px;">
     <a href="https://github.com/tencent-ailab/songgeneration"><img src="https://img.shields.io/badge/Project%20Page-GitHub-blue"></a>
     <a href="https://huggingface.co/tencent/SongGeneration" style="margin-left: 0.5rem;"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue"></a>
     <a href="https://huggingface.co/spaces/tencent/SongGeneration" style="margin-left: 0.5rem;"><img src="https://img.shields.io/badge/Live%20PlayGround-Demo-orange"></a>
@@ -83,9 +83,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified" style="font-size: 1.125rem; line-height: 1.7; font-family: 'Castoro', sans-serif;">
           <p>
-            🚀 We introduce <strong><a href="https://github.com/tencent-ailab/songgeneration" target="_blank" rel="noopener">LeVo 2</a></strong>, an open-source foundation model achieving <strong>commercial-grade generation</strong>. Through a <strong>large-scale expert evaluation</strong> (20 professionals, 6 dimensions, 100 songs per model), LeVo 2 is proven to <strong>outperform open-source baselines</strong> and <strong>rival commercial systems</strong> in Overall Quality, Melody, Arrangement, Sound Quality, and Structure, while matching many models in controllability assessments.<br>
-            🧠 LeVo 2 adopts a novel <strong>Hybrid LLM-Diffusion Architecture</strong>. The Language Model functions as the <strong>"Composer Brain,"</strong> orchestrating the musical structure and performance nuances (solving <em>how</em> to sing and play), while the Diffusion Model acts as the <strong>"High-Fidelity Renderer,"</strong> synthesizing intricate acoustic details. We designed a unique hierarchical structure to balance musicality with audio quality. Crucially, we utilize <strong>Multi-Stage Progressive Post-Training</strong> to explicitly inject <strong>music aesthetics priors</strong> into the LLM, drastically enhancing the model's controllability and ensuring the generation of <strong>structurally coherent, melodious music</strong>.<br>
-            🎧 We are releasing the <strong><a href="https://huggingface.co/lglg666/SongGeneration-v2-large" target="_blank" rel="noopener">SongGeneration-v2-large</a></strong> and <strong><a href="" target="_blank" rel="noopener">SongGeneration-v2-medium (coming soon)</a></strong> models, which support <strong>multilingual lyrics</strong> (including Chinese and English) and offer versatile control via <strong>text descriptions, audio prompts, and style presets</strong>. Designed for accessibility, LeVo 2 can run locally on consumer hardware with as little as <strong>12GB VRAM</strong>. For an immediate experience, we also provide the <strong>SongGeneration-v2-Fast</strong> version on <a href="https://huggingface.co/spaces/tencent/SongGeneration" target="_blank" rel="noopener">HuggingFace Space</a>**](https://huggingface.co/spaces/tencent/SongGeneration)! You can now generate a complete song in <strong>under one minute</strong>, trading a slight loss in musicality for significantly faster generation speed.<br>
+            🚀 We introduce <strong><a href="https://github.com/tencent-ailab/songgeneration" target="_blank" rel="noopener">LeVo 2</a></strong> (SongGeneration 2), an open-source foundation model achieving <strong>commercial-grade music generation</strong>. Through a <strong>large-scale expert evaluation</strong> (20 professionals, 6 dimensions, 100 songs per model), LeVo 2 is proven to <strong>outperform open-source baselines</strong> and <strong>rival commercial systems</strong> in Overall Quality, Melody, Arrangement, Sound Quality, and Structure, while matching many models in controllability assessments.<br>
+            🧠 LeVo 2 adopts a <strong>Hybrid LLM-Diffusion Architecture</strong>. The Language Model acts as the <strong>"Composer Brain"</strong>, orchestrating the global musical structure and performance logic (solving <em>how</em> to sing and play), while the Diffusion Model serves as the <strong>"High-Fidelity Renderer"</strong> to synthesize intricate acoustic details. At its core, we pioneer Hierarchical Representation Modeling to perfectly balance musicality with audio fidelity. Crucially, we utilize a <strong>Multi-Stage Progressive Post-Training</strong> strategy to explicitly align the LLM with both <strong>controllability standards and music aesthetics prior</strong>. This alignment process drastically enhances the model's controllability, effectively eliminates lyrical hallucinations, and ensures the generation of <strong>stable, structurally coherent, melodious music</strong>.<br>
+            🎧 We are thrilled to release the <strong><a href="https://huggingface.co/lglg666/SongGeneration-v2-large" target="_blank" rel="noopener">SongGeneration-v2-large</a></strong> and <strong><a href="" target="_blank" rel="noopener">SongGeneration-v2-medium (coming soon)</a></strong> models, which support <strong>multilingual lyrics</strong> and offer versatile control via <strong>text descriptions, audio prompts, and style presets</strong>. Designed for accessibility, it can run locally with 22GB VRAM (Large) and as little as 12GB VRAM (Medium).<br>
+            ⚡ For an immediate experience, we also provide the <strong>SongGeneration-v2-Fast</strong> version on <a href="https://huggingface.co/spaces/tencent/SongGeneration" target="_blank" rel="noopener">HuggingFace Space</a>! You can now generate a complete song in <strong>under one minute</strong>, trading a slight loss in musicality for significantly faster generation speed.<br>
           </p>
         </div>
 
@@ -96,7 +97,7 @@
 </section>
 
 <section class="hero teaser">
-  <div class="container is-centered has-text-centered" style="max-width: 70%;">
+  <div class="container is-centered has-text-centered" style="max-width: 80%;">
     <div class="hero-body">
       <div class="columns is-centered has-text-centered">
         <div class="column">
@@ -196,53 +197,6 @@
             <div class="lyrics-content">
               <span class="lyrics-section">[intro]</span>
               <span class="lyrics-section">[verse]</span>
-              漫漫长夜无尽期.
-              谁懂你心碎泪低垂.
-              世界不公命如棋.
-              过客人生皆如戏.
-              梦想易碎莫悲戚.
-              何不快乐追光曦.
-              直到故事落幕时.
-              人潮散尽回忆栖
-              <span class="lyrics-section">[chorus]</span>
-              梦如旧醉半醒时.
-              快乐是欢笑尽淋漓.
-              莫等舞台幕落迟.
-              歌声中寻答案依稀.
-              美丽回忆永不逝
-              <span class="lyrics-section">[inst]</span>
-              <span class="lyrics-section">[verse]</span>
-              不同手握多少棋.
-              谁能甘于平淡里.
-              梦想随光会消逝.
-              人生舞台终有寂.
-              无尽夜谁主演戏.
-              放下一切享当下意
-              <span class="lyrics-section">[chorus]</span>
-              每一刻快乐要珍惜.
-              直到曲终人散际.
-              人潮退去梦依旧.
-              歌声回荡忆永驻.
-              美丽回忆不褪色.
-              长夜中心痛化诗意
-              <span class="lyrics-section">[outro]</span>
-            </div>
-          </details>
-        </td>
-        <td style="text-align: left;">hard rock, motivational, electric guitar, bass guitar, drum kit.</td>
-        <td class="audio-overview" style="text-align: center;">
-          <audio controls="">
-            <source src="static/audio_sample/ours/08_s0.flac" type="audio/wav">
-          </audio>
-        </td>
-      </tr>
-      <tr>
-        <td width="30%" style="text-align: left;">
-          <details>
-            <summary style="cursor:pointer;font-weight:bold;">Click to show lyrics</summary>
-            <div class="lyrics-content">
-              <span class="lyrics-section">[intro]</span>
-              <span class="lyrics-section">[verse]</span>
               芳菲落尽.
               芳菲逝去.
               在这纯白的季节里.
@@ -283,7 +237,7 @@
         <td style="text-align: left;">gufeng, rock, heartbroken, guzheng, electric guitar, percussion.</td>
         <td class="audio-overview" style="text-align: center;">
           <audio controls="">
-            <source src="static/audio_sample/ours/02_s0.flac" type="audio/wav">
+            <source src="static/audio_sample/ours/2.flac" type="audio/wav">
           </audio>
         </td>
       </tr>
@@ -343,7 +297,7 @@
         <td style="text-align: left;">synth-pop, sweet, synthesizer, drum machine, bass, backing vocals.</td>
         <td class="audio-overview" style="text-align: center;">
           <audio controls="">
-            <source src="static/audio_sample/ours/11_s0.flac" type="audio/wav">
+            <source src="static/audio_sample/ours/11.flac" type="audio/wav">
           </audio>
         </td>
       </tr>
@@ -354,41 +308,92 @@
             <div class="lyrics-content">
               <span class="lyrics-section">[intro]</span>
               <span class="lyrics-section">[verse]</span>
-              洗衣机在阳台上轰鸣.
-              搅动着泡沫和旧时光.
-              你的衬衫在滚筒里.
-              跳着一支疲惫的舞.
-              水珠沿着玻璃滑落.
-              像不成句的告白
+              漫漫长夜无尽期.
+              谁懂你心碎泪低垂.
+              世界不公命如棋.
+              过客人生皆如戏.
+              梦想易碎莫悲戚.
+              何不快乐追光曦.
+              直到故事落幕时.
+              人潮散尽回忆栖
               <span class="lyrics-section">[chorus]</span>
-              生活是重复的旋律.
-              副歌部分总是相似.
-              但在某个走音的瞬间.
-              我突然想起你的眼睛
+              梦如旧醉半醒时.
+              快乐是欢笑尽淋漓.
+              莫等舞台幕落迟.
+              歌声中寻答案依稀.
+              美丽回忆永不逝
               <span class="lyrics-section">[inst]</span>
               <span class="lyrics-section">[verse]</span>
-              晾衣绳在风里摇晃.
-              挂满潮湿的回忆碎片.
-              一只袜子不知去向.
-              像我们弄丢的某个下午
-              <span class="lyrics-section">[bridge]</span>
-              天气预报说雨要停.
-              云层裂开一道金色缝隙.
-              洗衣机发出完成的蜂鸣.
-              像故事的另一个开始
+              不同手握多少棋.
+              谁能甘于平淡里.
+              梦想随光会消逝.
+              人生舞台终有寂.
+              无尽夜谁主演戏.
+              放下一切享当下意
               <span class="lyrics-section">[chorus]</span>
-              生活是未干的衣裳.
-              在微风里轻轻荡漾.
-              当我们学会欣赏褶皱.
-              也就读懂了柔软
+              每一刻快乐要珍惜.
+              直到曲终人散际.
+              人潮退去梦依旧.
+              歌声回荡忆永驻.
+              美丽回忆不褪色.
+              长夜中心痛化诗意
               <span class="lyrics-section">[outro]</span>
             </div>
           </details>
         </td>
-        <td style="text-align: left;">r&b, adult contemporary, cozy, electric piano, bass guitar, drum kit, saxophone.</td>
+        <td style="text-align: left;">rock, motivational, electric guitar, bass guitar, drum kit.</td>
+        <td class="audio-overview" style="text-align: center;">
+          <audio controls="">
+            <source src="static/audio_sample/ours/8.flac" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+      <tr>
+        <td width="30%" style="text-align: left;">
+          <details>
+            <summary style="cursor:pointer;font-weight:bold;">Click to show lyrics</summary>
+            <div class="lyrics-content">
+              <span class="lyrics-section">[intro]</span>
+              <span class="lyrics-section">[verse]</span>
+              这城市的喧嚣淹没了我的思绪.
+              它跳进我生活困扰每个夜晚的静谧.
+              我渴望逃离这无形的疏离与封闭.
+              徘徊在这疯狂世界的十字路口.
+              你我在这片喧嚷中渐渐迷失了自己.
+              我仍在寻找一方心灵的净土
+              <span class="lyrics-section">[chorus]</span>
+              多想忘记一切.
+              飞翔到无际的乐园.
+              那里只有你我守护着的.
+              最初的梦想.
+              我想要忘记一切.
+              抵达无际的乐园.
+              那里只有你我.
+              让梦想自由生长
+              <span class="lyrics-section">[inst]</span>
+              <span class="lyrics-section">[verse]</span>
+              我们的梦想穿越了时间的海洋.
+              就让我勇敢一次飞向那无际的乐园.
+              那里只有你我灵魂自由歌唱.
+              我们的梦想是生命最初的模样
+              <span class="lyrics-section">[chorus]</span>
+              我想要忘记过往.
+              飞向那无际的乐园.
+              那里只有你和我是彼此的光芒.
+              我们的梦想在星空下熠熠生辉.
+              我想要忘记一切飞向那无际的乐园.
+              那里只有你我书写永恒的篇章.
+              我们的梦想是永不落幕的渴望.
+              就让我忘记所有飞向那无际的乐园.
+              那里只有你和爱是唯一的信仰.
+              <span class="lyrics-section">[outro]</span>
+            </div>
+          </details>
+        </td>
+        <td style="text-align: left;">electronic, dance-pop, uplifting, synthesizer, drum machine, synth bass.</td>
         <td width="30%" class="audio-overview" style="text-align: center;">
           <audio controls="">
-            <source src="static/audio_sample/ours/19_s0.flac" type="audio/wav">
+            <source src="static/audio_sample/ours/5.flac" type="audio/wav">
           </audio>
         </td>
       </tr>
@@ -439,10 +444,190 @@
             </div>
           </details>
         </td>
-        <td style="text-align: left;">soft pop, nostalgic, acoustic guitar, piano, string section.</td>
+        <td style="text-align: left;">soft pop, nostalgic, acoustic guitar, piano, sampler, drum machine.</td>
         <td width="30%" class="audio-overview" style="text-align: center;">
           <audio controls="">
-            <source src="static/audio_sample/ours/04_s0.flac" type="audio/wav">
+            <source src="static/audio_sample/ours/4.flac" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+      <tr>
+        <td width="30%" style="text-align: left;">
+          <details>
+            <summary style="cursor:pointer;font-weight:bold;">Click to show lyrics</summary>
+            <div class="lyrics-content">
+              <span class="lyrics-section">[intro]</span>
+              <span class="lyrics-section">[verse]</span>
+              窗外人群正欢腾.
+              我却独对寂寞煎熬.
+              长街的欢乐如梦无痕.
+              回忆如卡片般淡薄易碎.
+              而心情却沉重如铅.
+              繁星静静照亮街道.
+              思念如潮水涌来.
+              悄然湿润我眼眶.
+              我独自轻声歌唱
+              <span class="lyrics-section">[chorus]</span>
+              听见风中的温柔.
+              带着一丝暖意如你的吻.
+              看雪花轻轻飘落.
+              怀念如潮水漫上心头.
+              你的影子无处不在.
+              我不觉孤单.
+              只因心中满是你
+              <span class="lyrics-section">[inst]</span>
+              <span class="lyrics-section">[verse]</span>
+              咖啡馆的旧座位.
+              还留着未说完的话.
+              手机里存着去年冬天.
+              你笑着捧起雪花的片段
+              <span class="lyrics-section">[chorus]</span>
+              时间像静止的沙漏.
+              承诺在风里渐渐模糊.
+              我数着钟摆的滴答.
+              在重逢与告别间徘徊.
+              学着与沉默共存.
+              在每次日落时分.
+              练习失去你的黄昏
+              <span class="lyrics-section">[bridge]</span>
+              如果季节能倒退.
+              让落叶回到枝头.
+              我是否会更勇敢.
+              在离别前紧紧停留.
+              月光浇灌的伤口.
+              在深夜里轻声问候.
+              爱是未寄出的信.
+              在心底生了根长了皱
+              <span class="lyrics-section">[chorus]</span>
+              窗外人群正欢腾.
+              我却独对寂寞歌唱.
+              心中满是你影子.
+              仿佛你就在身旁.
+              感动得泪流满面.
+              我背包装满眼泪.
+              却依然微笑
+              <span class="lyrics-section">[outro]</span>
+            </div>
+          </details>
+        </td>
+        <td style="text-align: left;">r&b, longing, piano, bass guitar, drum kit, saxophone.</td>
+        <td width="30%" class="audio-overview" style="text-align: center;">
+          <audio controls="">
+            <source src="static/audio_sample/ours/6.flac" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+      <tr>
+        <td width="30%" style="text-align: left;">
+          <details>
+            <summary style="cursor:pointer;font-weight:bold;">Click to show lyrics</summary>
+            <div class="lyrics-content">
+              <span class="lyrics-section">[intro]</span>
+              <span class="lyrics-section">[verse]</span>
+              列车呼啸穿过隧道.
+              窗外风景急速倒退.
+              像是与过去在告别.
+              奔向未定的终点线.
+              心中混杂期待恐惧.
+              请别问我要去哪里.
+              也别追问归期何时
+              <span class="lyrics-section">[chorus]</span>
+              让我随风去流浪.
+              我不想停留原地.
+              原地只有无尽循环.
+              不再规划人生.
+              不再遵循地图.
+              我渴望一场意外之旅.
+              邂逅未知的自己
+              <span class="lyrics-section">[inst]</span>
+              <span class="lyrics-section">[verse]</span>
+              行李简单只有背囊.
+              装着一颗渴望自由的心.
+              旧照片已撕碎抛洒.
+              不要任何牵绊.
+              不要沉重过往
+              <span class="lyrics-section">[chorus]</span>
+              让我随风去流浪.
+              我不想停留原地.
+              原地只会滋生腐朽.
+              不再规划人生.
+              不再遵循地图.
+              我渴望一场灵魂蜕变.
+              在路途中找到答案 
+              <span class="lyrics-section">[bridge]</span>
+              山川湖海皆是导师.
+              星空之下顿悟了渺小.
+              狭隘的悲欢被风吹散.
+              融入天地间的壮阔
+              <span class="lyrics-section">[chorus]</span>
+              它教会我何为生命.
+              何为存在的意义.
+              渺小如尘却也独特.
+              勇敢地写下自己的诗.
+              这是我的远征之路.
+              生命最绚烂的章节
+              <span class="lyrics-section">[outro]</span>
+            </div>
+          </details>
+        </td>
+        <td style="text-align: left;">rock, wanderlust, electric guitar, bass guitar, drum kit.</td>
+        <td width="30%" class="audio-overview" style="text-align: center;">
+          <audio controls="">
+            <source src="static/audio_sample/ours/16.flac" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+      <tr>
+        <td width="30%" style="text-align: left;">
+          <details>
+            <summary style="cursor:pointer;font-weight:bold;">Click to show lyrics</summary>
+            <div class="lyrics-content">
+              [intro-medium]; [verse]  ; [chorus]  ; [inst-medium]; [verse]  ; [chorus]  ; [bridge]  ; [chorus]  ; [outro-medium]
+              <span class="lyrics-section">[intro]</span>
+              <span class="lyrics-section">[verse]</span>
+              剑影映照在身上.
+              情深似海却难留.
+              情丝细腻如痴迷.
+              独对孤灯诉衷肠.
+              相思无用成残局.
+              红颜命运多凉薄.
+              忆年少共赏明月到天方
+              <span class="lyrics-section">[chorus]</span>
+              泪痕沾湿新衣袖.
+              风花雪月梦中留.
+              天涯海角情难求.
+              愿与君共渡白头.
+              红颜薄命泪两行.
+              遥望当年梦中留.
+              共赏明月透云霄
+              <span class="lyrics-section">[inst]</span>
+              <span class="lyrics-section">[verse]</span>
+              红尘情缘难安定.
+              爱恨交织难自弃.
+              相思无时不起舞.
+              红颜命薄如纸茫.
+              <span class="lyrics-section">[chorus]</span>
+              忆往昔共赏月到天荒.
+              旧情难断如雨落.
+              相伴直至白头时.
+              柳絮飘摇青衣皎.
+              满眼薄雾化无声流.
+              风花雪雨梦中游.
+              天涯海角情难断.
+              愿与天地共白头.
+              <span class="lyrics-section">[verse]</span>
+              前尘往事人憔悴.
+              红颜泪落意难平.
+              莫忘旧年誓言声.
+              共赏明月照苍穹
+              <span class="lyrics-section">[outro]</span>
+            </div>
+          </details>
+        </td>
+        <td style="text-align: left;">pop, fresh, electric guitar, synthesizer, backing vocals.</td>
+        <td width="30%" class="audio-overview" style="text-align: center;">
+          <audio controls="">
+            <source src="static/audio_sample/ours/3.flac" type="audio/wav">
           </audio>
         </td>
       </tr>
@@ -459,13 +644,13 @@
               总为她驻足凝望.
               她的微笑如夜曲悠扬.
               温暖中带着一丝忧伤.
+              <span class="lyrics-section">[chorus]</span>
               她的眼神如星闪亮.
               带我坠入梦境徜徉.
               我愿放下手中诗行.
               只为她轻声歌唱.
               日日守候在那街角.
-              盼她一次温柔回望
-              <span class="lyrics-section">[chorus]</span>
+              盼她一次温柔回望.
               我不过是远方的风.
               偶然路过她的乐章.
               却把心跳谱成了音符.
@@ -473,10 +658,10 @@
               <span class="lyrics-section">[inst]</span>
               <span class="lyrics-section">[verse]</span>
               我愿化身为那月光.
-              静静陪在她的身旁.
-              任那晚风轻拂梦想.
-              心事只对她默默讲
+              静静陪在她的身旁
               <span class="lyrics-section">[bridge]</span>
+              任那晚风轻拂梦想.
+              心事只对她默默讲.
               岁月是位沉默的乐手.
               将青涩吹奏成沧桑.
               我的歌谣褪了颜色.
@@ -494,13 +679,14 @@
             </div>
           </details>
         </td>
-        <td style="text-align: left;">swing, charming, piano, brass section, double bass, drum kit.</td>
+        <td style="text-align: left;">jazz, piano, brass section, double bass, drum kit, confident.</td>
         <td width="30%" class="audio-overview" style="text-align: center;">
           <audio controls="">
-            <source src="static/audio_sample/ours/07_s0.flac" type="audio/wav">
+            <source src="static/audio_sample/ours/7.flac" type="audio/wav">
           </audio>
         </td>
       </tr>
+      <tr>
       <tr>
         <td width="30%" style="text-align: left;">
           <details>
@@ -508,220 +694,101 @@
             <div class="lyrics-content">
               <span class="lyrics-section">[intro]</span>
               <span class="lyrics-section">[verse]</span>
-              城市霓虹吞没了星光.
-              我像浮尘游荡在街上.
-              耳机里循环着陈旧情歌.
-              却盖不住心底的荒凉.
-              人群拥挤却倍感孤单.
-              请别提及那个姓名.
-              也别唤醒那些曾经
+              洗衣机在阳台上轰鸣.
+              搅动着泡沫和旧时光.
+              你的衬衫在滚筒里.
+              跳着一支疲惫的舞.
+              水珠沿着玻璃滑落.
+              像不成句的告白
               <span class="lyrics-section">[chorus]</span>
-              让往事随风而去.
-              我不想再次回忆.
-              忆起那些甜蜜毒药.
-              不再强颜欢笑.
-              不再卑微乞讨.
-              我告诉自己不再回头.
-              回头便是万劫不复
+              生活是重复的旋律.
+              副歌部分总是相似.
+              但在某个走音的瞬间.
+              我突然想起你的眼睛
               <span class="lyrics-section">[inst]</span>
               <span class="lyrics-section">[verse]</span>
-              我曾试图用工作麻醉自己.
-              囚禁在无尽的忙碌里.
-              可是夜深人静的时刻.
-              不要翻开相册.
-              不要在回忆里沉溺
+              晾衣绳在风里摇晃.
+              挂满潮湿的回忆碎片.
+              一只袜子不知去向.
+              像我们弄丢的某个下午
               <span class="lyrics-section">[chorus]</span>
-              让往事随风而去.
-              我不想再次回忆.
-              忆起那些撕心裂肺.
-              不再强颜欢笑.
-              不再卑微乞讨.
-              我告诉自己不再哭泣.
-              永远不再为你哭泣
+              生活是琐碎的诗篇.
+              标点符号都是油盐.
+              但在翻炒的烟火气里.
+              藏着最动人的韵脚
               <span class="lyrics-section">[bridge]</span>
-              我曾以为爱是全部.
-              虽然它最终带来痛楚.
-              但伤痕是成长的勋章.
-              哭过之后眼睛更加明亮
+              天气预报说雨要停.
+              云层裂开一道金色缝隙.
+              洗衣机发出完成的蜂鸣.
+              像故事的另一个开始
               <span class="lyrics-section">[chorus]</span>
-              它提醒我何为真实.
-              何为虚妄的幻影.
-              因为未曾彻底心碎.
-              就不会懂得如何坚强.
-              这是我的告别时刻.
-              也是新生的序章
+              生活是未干的衣裳.
+              在微风里轻轻荡漾.
+              当我们学会欣赏褶皱.
+              也就读懂了柔软
               <span class="lyrics-section">[outro]</span>
             </div>
           </details>
         </td>
-        <td style="text-align: left;">emo-pop, heartbroken, 808 bass, drum machine, electric guitar.</td>
+        <td style="text-align: left;">r&b, cozy, bass guitar, drum kit, saxophone, electric guitar.</td>
         <td width="30%" class="audio-overview" style="text-align: center;">
           <audio controls="">
-            <source src="static/audio_sample/ours/13_s0.flac" type="audio/wav">
+            <source src="static/audio_sample/ours/19.flac" type="audio/wav">
           </audio>
         </td>
       </tr>
-      <tr>
-        <td width="30%" style="text-align: left;">
-          <details>
-            <summary style="cursor:pointer;font-weight:bold;">Click to show lyrics</summary>
-            <div class="lyrics-content">
-              <span class="lyrics-section">[intro]</span>
-              <span class="lyrics-section">[verse]</span>
-              镜子里的陌生面孔.
-              挂着疲惫不堪的笑容.
-              习惯性地隐藏情绪.
-              不敢流露半点脆弱.
-              外壳坚硬内心汹涌.
-              请别拆穿我的伪装.
-              也别施舍你的怜悯
-              <span class="lyrics-section">[chorus]</span>
-              我需要时间愈合.
-              我不想触碰伤疤.
-              伤疤之下暗流涌动.
-              不再依赖他人.
-              不再寻找寄托.
-              我逼迫自己独自站立.
-              站立成一座山峦
-              <span class="lyrics-section">[inst]</span>
-              <span class="lyrics-section">[verse]</span>
-              曾经将幸福寄托于你.
-              如同攀附大树的藤蔓.
-              如今学习扎根于大地.
-              不要随风摇摆.
-              不要轻易折断
-              <span class="lyrics-section">[chorus]</span>
-              我需要时间愈合.
-              我不想触碰伤疤.
-              伤疤是曾经的烙印.
-              不再依赖他人.
-              不再寻找寄托.
-              我逼迫自己变得完整.
-              由内而外的完整
-              <span class="lyrics-section">[bridge]</span>
-              泪水并非软弱象征.
-              它也能洗净灵魂窗户.
-              当我终于敢放声痛哭.
-              反而感受到了前所未有轻松
-              <span class="lyrics-section">[chorus]</span>
-              它冲刷掉所有尘埃.
-              让真相清晰浮现.
-              原来真正的强大始于.
-              接纳自己的所有不完美.
-              这是我的脆弱时分.
-              也是重建的开始
-              <span class="lyrics-section">[outro]</span>
-            </div>
-          </details>
-        </td>
-        <td style="text-align: left;">c-pop, vulnerable, piano, bass, drum machine, string section.</td>
-        <td width="30%" class="audio-overview" style="text-align: center;">
-          <audio controls="">
-            <source src="static/audio_sample/ours/15_s0.flac" type="audio/wav">
-          </audio>
-        </td>
-      </tr>
-      <tr>
-        <td width="30%" style="text-align: left;">
-          <details>
-            <summary style="cursor:pointer;font-weight:bold;">Click to show lyrics</summary>
-            <div class="lyrics-content">
-              <span class="lyrics-section">[intro]</span>
-              <span class="lyrics-section">[verse]</span>
-              炊烟写着天空的诗.
-              米饭香是家的标点.
-              灶火舔着铁锅底.
-              炖着时光的温暖
-              <span class="lyrics-section">[chorus]</span>
-              这厨房的魔法最平常.
-              却让游子魂牵梦萦.
-              当碗筷奏响叮当时.
-              才知幸福是妈妈的味道
-              <span class="lyrics-section">[inst]</span>
-              <span class="lyrics-section">[verse]</span>
-              腌菜坛藏着夏天.
-              酱油瓶站着岗.
-              菜刀在砧板跳舞.
-              切出生活的韵律
-              <span class="lyrics-section">[chorus]</span>
-              这厨房的魔法最平常.
-              却让游子魂牵梦萦.
-              当碗筷奏响叮当时.
-              才知幸福是妈妈的味道
-              <span class="lyrics-section">[bridge]</span>
-              忽然想学做羹汤.
-              却发现爱的配方.
-              早就刻在记忆里.
-              是妈妈手的温度
-              <span class="lyrics-section">[chorus]</span>
-              这厨房的烟火最深情.
-              一粥一饭都是传承.
-              当蒸汽模糊了窗花.
-              才懂平凡是最大的奇迹
-              <span class="lyrics-section">[outro]</span>
-            </div>
-          </details>
-        </td>
-        <td style="text-align: left;">folk pop, heartwarming, acoustic guitar, piano, string section.</td>
-        <td width="30%" class="audio-overview" style="text-align: center;">
-          <audio controls="">
-            <source src="static/audio_sample/ours/38_s0.flac" type="audio/wav">
-          </audio>
-        </td>
-      </tr>
-      <tr>
-        <td width="30%" style="text-align: left;">
-          <details>
-            <summary style="cursor:pointer;font-weight:bold;">Click to show lyrics</summary>
-            <div class="lyrics-content">
-              <span class="lyrics-section">[intro]</span>
-              <span class="lyrics-section">[verse]</span>
-              蝉鸣叫醒盛夏热浪翻涌.
-              西瓜泡在井水透着冰融.
-              老蒲扇摇着蝉声阵阵浓.
-              竹席上的梦藏着夏夜的星空.
-              萤火虫提着灯笼飞舞花丛.
-              蛙鸣声声唱着岁月从容
-              <span class="lyrics-section">[chorus]</span>
-              夏天是藏着热烈的美梦.
-              每片晚霞都染着绯红.
-              晚风拂过脸颊吹散烦忧.
-              青春的故事在蝉声里翻涌
-              <span class="lyrics-section">[inst]</span>
-              <span class="lyrics-section">[verse]</span>
-              蝉鸣叫醒盛夏热浪翻涌.
-              冰棍儿融化在掌心之中.
-              少年的心事藏在日记本中.
-              梧桐树下的约定还在心中.
-              单车驶过的风带着悸动
-              <span class="lyrics-section">[chorus]</span>
-              夏天是藏着热烈的美梦.
-              每片晚霞都染着绯红.
-              晚风拂过脸颊吹散烦忧.
-              青春的故事在蝉声里翻涌
-              <span class="lyrics-section">[bridge]</span>
-              走过了春的懵懂秋的稳重.
-              才懂夏的热烈有多汹涌.
-              星空下的许愿还在心中.
-              年少的梦永远有始无终
-              <span class="lyrics-section">[chorus]</span>
-              夏天是藏着热烈的美梦.
-              每片晚霞都染着绯红.
-              晚风拂过脸颊吹散烦忧.
-              青春的故事在蝉声里翻涌
-              <span class="lyrics-section">[outro]</span>
-            </div>
-          </details>
-        </td>
-        <td style="text-align: left;">city pop, summery, electric piano, bass guitar, drum kit, brass section.</td>
-        <td width="30%" class="audio-overview" style="text-align: center;">
-          <audio controls="">
-            <source src="static/audio_sample/ours/49_s0.flac" type="audio/wav">
-          </audio>
-        </td>
-      </tr>
-      <tr>
         <td width="30%" style="text-align: left;"> <span class="icon"><i class="fas fa-magic"></i></span>English</td>
+      </tr>
+      <tr>
+        <td width="30%" style="text-align: left;">
+          <details>
+            <summary style="cursor:pointer;font-weight:bold;">Click to show lyrics</summary>
+            <div class="lyrics-content">
+              <span class="lyrics-section">[intro]</span>
+              <span class="lyrics-section">[verse]</span>
+              Train whistles in the dusk. 
+              Tracks stretch in the hush. 
+              Travelers wave goodbye. 
+              Tears they brush. 
+              Luggage stacked on the platform. 
+              Dreams they crush.
+              <span class="lyrics-section">[chorus]</span>
+              Journey is the story where the roads rush. 
+              Is the unknown path that the feet must hush. 
+              Is the fleeting moment that the heart must flush. 
+              Is the endless quest that the soul must lush.
+              <span class="lyrics-section">[inst]</span>
+              <span class="lyrics-section">[verse]</span>
+              Fields pass by the window. 
+              Green and mellow. 
+              Villages dot the horizon. 
+              Peaceful fellow. 
+              Clouds drift in the sky. 
+              Slow and yellow.
+              <span class="lyrics-section">[chorus]</span>
+              Journey is the story where the roads rush. 
+              Is the unknown path that the feet must hush. 
+              Is the fleeting moment that the heart must flush. 
+              Is the endless quest that the soul must lush.
+              <span class="lyrics-section">[bridge]</span>
+              Riding through the night till the day's blush. 
+              Feeling the wind that the window does gush. 
+              Journey days with you are never a mush.
+              <span class="lyrics-section">[chorus]</span>
+              Journey is the story where the roads rush. 
+              Is the unknown path that the feet must hush. 
+              Is the fleeting moment that the heart must flush. 
+              Is the endless quest that the soul must lush.
+              <span class="lyrics-section">[outro]</span>
+            </div>
+          </details>
+        </td>
+        <td style="text-align: left;">rock, electric guitar, bass guitar, drum kit, uplifting.</td>
+        <td class="audio-overview" style="text-align: center;">
+          <audio controls="">
+            <source src="static/audio_sample/ours/66.flac" type="audio/wav">
+          </audio>
+        </td>
       </tr>
       <tr>
         <td width="30%" style="text-align: left;">
@@ -758,8 +825,8 @@
               Through the ups and downs. 
               That life may repeat. 
               Holding your hand.
-               We never feel defeat. 
-               Promises with you are so sweet.
+              We never feel defeat. 
+              Promises with you are so sweet.
               <span class="lyrics-section">[chorus]</span>
               Promise is the vow that the stars do keep. 
               Is the warmth that the cold nights can't defeat. 
@@ -769,14 +836,13 @@
             </div>
           </details>
         </td>
-        <td style="text-align: left;">pop, uplifting, electric guitar, bass guitar, drum kit, backing vocals.</td>
+        <td style="text-align: left;">synth-pop, synthesizer, sampler, synth bass, refreshing.</td>
         <td class="audio-overview" style="text-align: center;">
           <audio controls="">
-            <source src="static/audio_sample/ours/58_s0.flac" type="audio/wav">
+            <source src="static/audio_sample/ours/58.flac" type="audio/wav">
           </audio>
         </td>
       </tr>
-
       <tr>
         <td width="30%" style="text-align: left;">
           <details>
@@ -784,53 +850,50 @@
             <div class="lyrics-content">
               <span class="lyrics-section">[intro]</span>
               <span class="lyrics-section">[verse]</span>
-              Breeze stirs the willow branches. 
-              By the riverbank side. 
-              Wild geese leave the northern land. 
-              With the autumn tide. 
-              Chrysanthemums bloom on the fence. 
-              Their fragrance can't hide.
+              Sunset dyes the sky red. 
+              Homing birds fly ahead. 
+              Evening breeze sweeps the wheat field. 
+              Fragrance stains the thread. 
+              Smoke rises from the hometown. 
+              Homesickness fills the head.
               <span class="lyrics-section">[chorus]</span>
-              Autumn is the poem written by the falling leaves. 
-              Is the golden hue that the sunlight achieves. 
-              Is the quiet longing that the heart retrieves. 
-              Is the gentle sigh that the wind believes.
+              Returning is the hope woven by the sunset glow. 
+              Is the warmth from the kitchen where the firelight glows. 
+              Is the earnest wish packed in the traveling load. 
+              Is the softest destination that the heart always knows.
               <span class="lyrics-section">[inst]</span>
               <span class="lyrics-section">[verse]</span>
-              Mooncakes lie on the plate. 
-              Mid-autumn night is late. 
-              Lanterns hang on the eaves. 
-              Casting light so great. 
-              Memories of old days. 
-              Are hard to abate.
+              Old locust tree's chair. 
+              Holds memories everywhere. 
+              Grandma's gentle words. 
+              Linger in the air. 
+              Stream by the door flows. 
+              On without a care.
               <span class="lyrics-section">[chorus]</span>
-              Autumn is the poem written by the falling leaves. 
-              Is the golden hue that the sunlight achieves. 
-              Is the quiet longing that the heart retrieves. 
-              Is the gentle sigh that the wind believes.
+              Returning is the hope woven by the sunset glow. 
+              Is the warmth from the kitchen where the firelight glows. 
+              Is the earnest wish packed in the traveling load. 
+              Is the softest destination that the heart always knows.
               <span class="lyrics-section">[bridge]</span>
-              Walking through the maple woods. 
-              Where the red leaves stand. 
-              Watching the sunset sink. 
-              Beyond the distant land. 
-              Autumn days with you are so grand.
+              Through thousands of mountains and rivers. 
+              Through all the joys and shivers. 
+              Home's direction is never a quiver.
               <span class="lyrics-section">[chorus]</span>
-              Autumn is the poem written by the falling leaves. 
-              Is the golden hue that the sunlight achieves. 
-              Is the quiet longing that the heart retrieves. 
-              Is the gentle sigh that the wind believes.
+              Returning is the hope woven by the sunset glow. 
+              Is the warmth from the kitchen where the firelight glows. 
+              Is the earnest wish packed in the traveling load. 
+              Is the softest destination that the heart always knows.
               <span class="lyrics-section">[outro]</span>
             </div>
           </details>
         </td>
-        <td style="text-align: left;">ballad, wistful, acoustic guitar, percussion.</td>
+        <td style="text-align: left;">electronic, synthesizer, drum machine, sampler, relaxed.</td>
         <td class="audio-overview" style="text-align: center;">
           <audio controls="">
-            <source src="static/audio_sample/ours/54_s0.flac" type="audio/wav">
+            <source src="static/audio_sample/ours/52.flac" type="audio/wav">
           </audio>
         </td>
       </tr>
-
       <tr>
         <td width="30%" style="text-align: left;">
           <details>
@@ -838,51 +901,152 @@
             <div class="lyrics-content">
               <span class="lyrics-section">[intro]</span>
               <span class="lyrics-section">[verse]</span>
-              Notes float in the air. 
-              Voices start to compare. 
-              Choirs sing in tune. 
-              Harmonies start to prepare. 
-              Pianos play the chords. 
-              Hearts start to declare.
+              Stairs climb up the tower. 
+              Views are so much power. 
+              Cities spread below. 
+              Skies start to cower. 
+              Windows line the walls. 
+              Days feel like a flower.
               <span class="lyrics-section">[chorus]</span>
-              Choir room is the space where the voices declare. 
-              Is the harmony that fills the air's prepare. 
-              Is the song that makes the weary heart repair. 
-              Is the joy that makes the united soul beware.
+              Observatory is the spot where the views do flower. 
+              Is the glass that shows the city's cower. 
+              Is the height that gives the sight's power. 
+              Is the awe that makes the human heart tower.
               <span class="lyrics-section">[inst]</span>
               <span class="lyrics-section">[verse]</span>
-              Conductors wave their hands. 
-              Music fills the lands. 
-              Sopranos hit the high. 
-              Altos take the stands. 
-              Tenors and basses. 
-              Voices blend in bands.
+              Telescopes point up. 
+              Stars start to crop. 
+              Planets glow so bright. 
+              Nights start to prop. 
+              Astronomers explain. 
+              Facts start to drop.
               <span class="lyrics-section">[chorus]</span>
-              Choir room is the space where the voices declare. 
-              Is the harmony that fills the air's prepare. 
-              Is the song that makes the weary heart repair. 
-              Is the joy that makes the united soul beware.
+              Observatory is the spot where the views do flower. 
+              Is the glass that shows the city's cower. 
+              Is the height that gives the sight's power. 
+              Is the awe that makes the human heart tower.
               <span class="lyrics-section">[bridge]</span>
-              Singing in the room where the music does share. 
-              Feeling the harmony that the voices wear. 
-              Choir days with you are the sweetest flair.
+              Stargazing at the observatory where the stars do crop. 
+              Feeling the wonder that the cosmos prop. 
+              Observatory nights with you are the sweetest top.
               <span class="lyrics-section">[chorus]</span>
-              Choir room is the space where the voices declare. 
-              Is the harmony that fills the air's prepare. 
-              Is the song that makes the weary heart repair. 
-              Is the joy that makes the united soul beware.
+              Is the glass that shows the spot where the views do flower. 
+              Is the glass that shows the city's cower. 
+              Is the height that gives the sight's power. 
+              Is the awe that makes the human heart tower. 
               <span class="lyrics-section">[outro]</span>
             </div>
           </details>
         </td>
-        <td style="text-align: left;">cool jazz, communal, choir, piano.</td>
+        <td style="text-align: left;">pop, dizi, percussion, backing vocals, uplifting.</td>
         <td class="audio-overview" style="text-align: center;">
           <audio controls="">
-            <source src="static/audio_sample/ours/81_s0.flac" type="audio/wav">
+            <source src="static/audio_sample/ours/76.flac" type="audio/wav">
           </audio>
         </td>
       </tr>
-
+      <tr>
+        <td width="30%" style="text-align: left;">
+          <details>
+            <summary style="cursor:pointer;font-weight:bold;">Click to show lyrics</summary>
+            <div class="lyrics-content">
+              <span class="lyrics-section">[intro]</span>
+              <span class="lyrics-section">[verse]</span>
+              Dewdrops cling to clover. 
+              Morning light is over. 
+              Butterflies take wing. 
+              Day begins to hover. 
+              Grass blades bend and shiver. 
+              Peace we start to discover.
+              <span class="lyrics-section">[chorus]</span>
+              Spring is the whisper that the winter uncovers. 
+              Is the bloom that breaks through the frost's cold covers. 
+              Is the song that the waking world recovers. 
+              Is the hope that the weary heart recovers.
+              <span class="lyrics-section">[inst]</span>
+              <span class="lyrics-section">[verse]</span>
+              Cherry blossoms scatter. 
+              Breezes softly flatter. 
+              Bees hum through the garden. 
+              Nectar they gather. 
+              Buds burst open slowly. 
+              Joy we can't bother.
+              <span class="lyrics-section">[chorus]</span>
+              Spring is the whisper that the winter uncovers. 
+              Is the bloom that breaks through the frost's cold covers. 
+              Is the song that the waking world recovers. 
+              Is the hope that the weary heart recovers.
+              <span class="lyrics-section">[bridge]</span>
+              Walking through the meadows where the clover covers. 
+              Breathing in the scent of the air that hovers. 
+              Spring days with you are the sweetest lovers.
+              <span class="lyrics-section">[chorus]</span>
+              Spring is the whisper that the winter uncovers. 
+              Is the bloom that breaks through the frost's cold covers. 
+              Is the song that the waking world recovers. 
+              Is the hope that the weary heart recovers.
+              <span class="lyrics-section">[outro]</span>
+            </div>
+          </details>
+        </td>
+        <td style="text-align: left;">r&b,sampler,drum kit,electric guitar,laid-back.</td>
+        <td class="audio-overview" style="text-align: center;">
+          <audio controls="">
+            <source src="static/audio_sample/ours/69.flac" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+      <tr>
+        <td width="30%" style="text-align: left;">
+          <details>
+            <summary style="cursor:pointer;font-weight:bold;">Click to show lyrics</summary>
+            <div class="lyrics-content">
+              <span class="lyrics-section">[intro]</span>
+              <span class="lyrics-section">[verse]</span>
+              Baskets hold the berries. 
+              Bushes wear the cherries. 
+              Thorns prick the fingers. 
+              Juice starts to carry. 
+              Pails fill up slowly. 
+              Days feel like a ferry.
+              <span class="lyrics-section">[chorus]</span>
+              Orchard is the garden where the fruits do ferry. 
+              Is the tree that bends with the fruit's carry. 
+              Is the sweet that makes the sour heart marry. 
+              Is the joy that makes the hungry soul tarry.
+              <span class="lyrics-section">[inst]</span>
+              <span class="lyrics-section">[verse]</span>
+              Apples hang in clusters. 
+              Bees hum in adjusters. 
+              Wind shakes the branches. 
+              Fruits fall in the dusters. 
+              Children pick them up. 
+              Laughter fills the rustlers.
+              <span class="lyrics-section">[chorus]</span>
+              Orchard is the garden where the fruits do ferry. 
+              Is the tree that bends with the fruit's carry. 
+              Is the sweet that makes the sour heart marry. 
+              Is the joy that makes the hungry soul tarry.
+              <span class="lyrics-section">[bridge]</span>
+              Picking in the orchard where the apples do clutter. 
+              Tasting the fruit that the sun does butter. 
+              Orchard days with you are the sweetest gutter.
+              <span class="lyrics-section">[chorus]</span>
+              Orchard is the garden where the fruits do ferry. 
+              Is the tree that bends with the fruit's carry. 
+              Is the sweet that makes the sour heart marry. 
+              Is the joy that makes the hungry soul tarry.
+              <span class="lyrics-section">[outro]</span>
+            </div>
+          </details>
+        </td>
+        <td style="text-align: left;">traditional country, joyful, acoustic guitar, fiddle, banjo, bass guitar.</td>
+        <td class="audio-overview" style="text-align: center;">
+          <audio controls="">
+            <source src="static/audio_sample/ours/88.flac" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
       <tr>
         <td width="30%" style="text-align: left;">
           <details>
@@ -927,10 +1091,10 @@
             </div>
           </details>
         </td>
-        <td style="text-align: left;">pop-rock, longing, electric guitar, drum kit, bass guitar.</td>
+        <td style="text-align: left;">blues, longing, electric guitar, harmonica, drum kit, bass guitar.</td>
         <td class="audio-overview" style="text-align: center;">
           <audio controls="">
-            <source src="static/audio_sample/ours/57_s0.flac" type="audio/wav">
+            <source src="static/audio_sample/ours/57.flac" type="audio/wav">
           </audio>
         </td>
       </tr>
@@ -978,10 +1142,10 @@
             </div>
           </details>
         </td>
-        <td style="text-align: left;">funk, sleepy, electric piano, bass guitar, drum kit.</td>
+        <td style="text-align: left;">r&b, laid-back, electric piano, bass guitar, drum machine, synthesizer.</td>
         <td class="audio-overview" style="text-align: center;">
           <audio controls="">
-            <source src="static/audio_sample/ours/73_s0.flac" type="audio/wav">
+            <source src="static/audio_sample/ours/73.flac" type="audio/wav">
           </audio>
         </td>
       </tr>
@@ -992,47 +1156,47 @@
             <div class="lyrics-content">
               <span class="lyrics-section">[intro]</span>
               <span class="lyrics-section">[verse]</span>
-              Oars dip in the water. 
-              Canoe starts to falter. 
-              Lakeside trees stand tall. 
-              Sunlight starts to alter. 
-              Water ripples softly. 
-              Peace starts to salter.
+              Notes float in the air. 
+              Voices start to compare. 
+              Choirs sing in tune. 
+              Harmonies start to prepare. 
+              Pianos play the chords. 
+              Hearts start to declare.
               <span class="lyrics-section">[chorus]</span>
-              Lake is the mirror where the sky does salter. 
-              Is the breeze that whispers through the reeds' alter. 
-              Is the calm that makes the restless heart falter. 
-              Is the peace that makes the busy mind exalter.
+              Choir room is the space where the voices declare. 
+              Is the harmony that fills the air's prepare. 
+              Is the song that makes the weary heart repair. 
+              Is the joy that makes the united soul beware.
               <span class="lyrics-section">[inst]</span>
               <span class="lyrics-section">[verse]</span>
-              Lilies float on surface. 
-              Frogs jump with a purpose. 
-              Dragonflies zip by. 
-              Days feel like a circus. 
-              Fishing lines cast out. 
-              Hopes start to surface.
+              Conductors wave their hands. 
+              Music fills the lands. 
+              Sopranos hit the high. 
+              Altos take the stands. 
+              Tenors and basses. 
+              Voices blend in bands.
               <span class="lyrics-section">[chorus]</span>
-              Lake is the mirror where the sky does salter. 
-              Is the breeze that whispers through the reeds' alter. 
-              Is the calm that makes the restless heart falter. 
-              Is the peace that makes the busy mind exalter.
+              Choir room is the space where the voices declare. 
+              Is the harmony that fills the air's prepare. 
+              Is the song that makes the weary heart repair. 
+              Is the joy that makes the united soul beware.
               <span class="lyrics-section">[bridge]</span>
-              Paddling on the lake where the water does palter. 
-              Watching the sunset paint the clouds in Walter. 
-              Lake days with you are the sweetest altarpiece.
+              Singing in the room where the music does share. 
+              Feeling the harmony that the voices wear. 
+              Choir days with you are the sweetest flair.
               <span class="lyrics-section">[chorus]</span>
-              Lake is the mirror where the sky does salter. 
-              Is the breeze that whispers through the reeds' alter. 
-              Is the calm that makes the restless heart falter. 
-              Is the peace that makes the busy mind exalter.
+              Choir room is the space where the voices declare. 
+              Is the harmony that fills the air's prepare. 
+              Is the song that makes the weary heart repair. 
+              Is the joy that makes the united soul beware.
               <span class="lyrics-section">[outro]</span>
             </div>
           </details>
         </td>
-        <td style="text-align: left;">smooth jazz, peaceful, saxophone, electric piano, drum kit.</td>
+        <td style="text-align: left;">jazz, relaxed, piano, brass, drum kit, bass.</td>
         <td class="audio-overview" style="text-align: center;">
           <audio controls="">
-            <source src="static/audio_sample/ours/89_s0.flac" type="audio/wav">
+            <source src="static/audio_sample/ours/81.flac" type="audio/wav">
           </audio>
         </td>
       </tr>
@@ -1043,45 +1207,47 @@
             <div class="lyrics-content">
               <span class="lyrics-section">[intro]</span>
               <span class="lyrics-section">[verse]</span>
-              Starlight sprinkles on the dress. 
-              Moonlight fills the chest. 
-              Cicadas hide in moss. 
-              Thoughts spread through the west.
+              Fireflies light the summer night. 
+              Frogs croak by the field side. 
+              Lotus leaves hold the dewdrops. 
+              That roll and glide. 
+              Grandma's palm fan sways. 
+              Stories start to bide.
               <span class="lyrics-section">[chorus]</span>
-              Love is the confession kissed by the evening breeze. 
-              Is the surging tide where stars flow into the seas. 
-              Is the tender care through all the years. 
-              Is the lifelong preference that never flees.
+              Summer is the dream lit by the firefly's glow. 
+              Is the peace under the lotus where the cool winds blow. 
+              Is the passion sung by the cicadas high and low. 
+              Is the tranquility brought by the evening breeze slow. 
               <span class="lyrics-section">[inst]</span>
               <span class="lyrics-section">[verse]</span>
-              Fallen leaves cover the street. 
-              Stories start to repeat. 
-              Fireworks warm the night. 
-              Worries melt complete. 
-              Time twists the dust. 
-              Memories retreat.
+              Milky Way stretches across the sky. 
+              Stars twinkle and sigh. 
+              Grandma's old tales. 
+              Soften the lullaby. 
+              Iced plum juice sweetens. 
+              The mood that makes us high.
               <span class="lyrics-section">[chorus]</span>
-              Love is the confession kissed by the evening breeze. 
-              Is the surging tide where stars flow into the seas. 
-              Is the tender care through all the years. 
-              Is the lifelong preference that never flees.
+              Summer is the dream lit by the firefly's glow. 
+              Is the peace under the lotus where the cool winds blow. 
+              Is the passion sung by the cicadas high and low. 
+              Is the tranquility brought by the evening breeze slow.
               <span class="lyrics-section">[bridge]</span>
-              Through spring autumn winter and summer. 
-              Through wind rain thunder and lightning. 
-              Holding your hand we fear no disaster.
+              Chasing fireflies that dance around. 
+              Listening to frogs sing till the moon is round. 
+              Summer nights with you are never profound.
               <span class="lyrics-section">[chorus]</span>
-              Love is the confession kissed by the evening breeze. 
-              Is the surging tide where stars flow into the seas. 
-              Is the tender care through all the years. 
-              Is the lifelong preference that never flees.
+              Summer is the dream lit by the firefly's glow. 
+              Is the peace under the lotus where the cool winds blow. 
+              Is the passion sung by the cicadas high and low. 
+              Is the tranquility brought by the evening breeze slow.
               <span class="lyrics-section">[outro]</span>
             </div>
           </details>
         </td>
-        <td style="text-align: left;">country pop, romantic, acoustic guitar, fiddle, bass guitar, drum kit.</td>
+        <td style="text-align: left;">roots reggae, chill, bass guitar, electric guitar, percussion, brass section.</td>
         <td class="audio-overview" style="text-align: center;">
           <audio controls="">
-            <source src="static/audio_sample/ours/51_s0.flac" type="audio/wav">
+            <source src="static/audio_sample/ours/53.flac" type="audio/wav">
           </audio>
         </td>
       </tr>
@@ -1129,112 +1295,10 @@
             </div>
           </details>
         </td>
-        <td style="text-align: left;">cool jazz, thoughtful, piano, double bass, drum kit, saxophone.</td>
+        <td style="text-align: left;">jazz, relaxed, piano, brass, drum kit, double bass.</td>
         <td class="audio-overview" style="text-align: center;">
           <audio controls="">
-            <source src="static/audio_sample/ours/63_s0.flac" type="audio/wav">
-          </audio>
-        </td>
-      </tr>
-      <tr>
-        <td width="30%" style="text-align: left;">
-          <details>
-            <summary style="cursor:pointer;font-weight:bold;">Click to show lyrics</summary>
-            <div class="lyrics-content">
-              <span class="lyrics-section">[intro]</span>
-              <span class="lyrics-section">[verse]</span>
-              Drizzle taps the window. 
-              Thoughts start to grow. 
-              Oil-paper umbrella shades. 
-              Memories that glow. 
-              Moss climbs the old wall. 
-              Tales start to show.
-              <span class="lyrics-section">[chorus]</span>
-              Longing is the web woven by the rain's soft tune. 
-              Is the poem written by time beneath the moon. 
-              Is the gaze hidden in eyes that never swoon. 
-              Is the obsession in heart that won't end too soon.
-              <span class="lyrics-section">[inst]</span>
-              <span class="lyrics-section">[verse]</span>
-              Black awning boat sails cross the river. 
-              Longing sways to and fro. 
-              Stone bridge side past days. 
-              Gentle as dew drops flow. 
-              Evening breeze brushes the cheek. 
-              Yearning starts to grow.
-              <span class="lyrics-section">[chorus]</span>
-              Longing is the web woven by the rain's soft tune. 
-              Is the poem written by time beneath the moon. 
-              Is the gaze hidden in eyes that never swoon. 
-              Is the obsession in heart that won't end too soon.
-              <span class="lyrics-section">[bridge]</span>
-              Through misty rivers and southern towns. 
-              Through lantern lights that spin around. 
-              With your longing in mind we never feel down.
-              <span class="lyrics-section">[chorus]</span>
-              Longing is the web woven by the rain's soft tune. 
-              Is the poem written by time beneath the moon. 
-              Is the gaze hidden in eyes that never swoon. 
-              Is the obsession in heart that won't end too soon.
-              <span class="lyrics-section">[outro]</span>
-            </div>
-          </details>
-        </td>
-        <td style="text-align: left;">modern folk, yearning, acoustic guitar, percussion.</td>
-        <td class="audio-overview" style="text-align: center;">
-          <audio controls="">
-            <source src="static/audio_sample/ours/56_s0.flac" type="audio/wav">
-          </audio>
-        </td>
-      </tr>
-      <tr>
-        <td width="30%" style="text-align: left;">
-          <details>
-            <summary style="cursor:pointer;font-weight:bold;">Click to show lyrics</summary>
-            <div class="lyrics-content">
-              <span class="lyrics-section">[intro]</span>
-              <span class="lyrics-section">[verse]</span>
-              Frames hang on the wall. 
-              Memories start to call. 
-              Photos of the past. 
-              Moments start to stall. 
-              Smiles on the faces. 
-              Hearts start to fall.
-              <span class="lyrics-section">[chorus]</span>
-              Living room is the space where the memories call. 
-              Is the couch that holds the family's stall. 
-              Is the laugh that makes the sad heart fall. 
-              Is the love that makes the broken soul enthrall.
-              <span class="lyrics-section">[inst]</span>
-              <span class="lyrics-section">[verse]</span>
-              Pillows stack on the couch. 
-              Blankets cover the slouch. 
-              TV plays the shows. 
-              Days feel like a crouch. 
-              Games start to play. 
-              Laughter fills the couch.
-              <span class="lyrics-section">[chorus]</span>
-              Living room is the space where the memories call. 
-              Is the couch that holds the family's stall. 
-              Is the laugh that makes the sad heart fall. 
-              Is the love that makes the broken soul enthrall.
-              <span class="lyrics-section">[bridge]</span>
-              Relaxing in the room where the love does install. 
-              Sharing the moments that the family does recall. 
-              Living room days with you are the sweetest sprawl.
-              <span class="lyrics-section">[chorus]</span>
-              Living room is the space where the memories call. 
-              Is the couch that holds the family's stall. 
-              Is the laugh that makes the sad heart fall. 
-              Is the love that makes the broken soul enthrall.
-              <span class="lyrics-section">[outro]</span>
-            </div>
-          </details>
-        </td>
-        <td style="text-align: left;">swing, joyful, piano, brass section, double bass, drum kit.</td>
-        <td class="audio-overview" style="text-align: center;">
-          <audio controls="">
-            <source src="static/audio_sample/ours/86_s0.flac" type="audio/wav">
+            <source src="static/audio_sample/ours/63.flac" type="audio/wav">
           </audio>
         </td>
       </tr>
