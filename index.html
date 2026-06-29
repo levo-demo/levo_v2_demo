@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="LeVo 2: Enhancing Musicality and Controllability via Multi-Stage Progressive Post-Training">
-  <meta name="keywords" content="Song generation, Music generation, Language Model, Direct Preference Optimization, Multi-Stage Progressive Post-Training">
+        content="LeVo 2: Stable and Melodious Song Generation via Hierarchical Representation Modeling and Progressive Post-Training">
+  <meta name="keywords" content="Song generation, Music generation, Language Model, Hierarchical Representation Modeling, Aesthetics-Guided Training, Direct Preference Optimization, Progressive Post-Training">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LeVo 2</title>
 
@@ -55,20 +55,19 @@
         </div>
       </div>
     </div>
-    <div class="image-container" style="display: flex; justify-content: center; align-items: center; gap: 1.0rem; margin-top: 0.75rem;">
+    <!-- <div class="image-container" style="display: flex; justify-content: center; align-items: center; gap: 1.0rem; margin-top: 0.75rem;">
 			<div>
 				<img src="./static/logo_tencent.png" alt="Tencent" style="height: 80px; width: auto;">
 			</div>
 			<div>
 				<img src="./static/logo_hcsi.png" alt="HCSI" style="height: 80px; width: auto;">
 			</div>
-		</div>
+		</div> -->
   </div>
 
   <div class="has-text-centered" style="margin-top: 0rem; padding-bottom: 20px;">
-    <a href="https://github.com/tencent-ailab/songgeneration"><img src="https://img.shields.io/badge/Project%20Page-GitHub-blue"></a>
-    <a href="https://huggingface.co/tencent/SongGeneration" style="margin-left: 0.5rem;"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue"></a>
-    <a href="https://huggingface.co/spaces/tencent/SongGeneration" style="margin-left: 0.5rem;"><img src="https://img.shields.io/badge/Live%20PlayGround-Demo-orange"></a>
+    <a href="https://github.com/levo-demo/LeVo"><img src="https://img.shields.io/badge/Project%20Page-GitHub-blue"></a>
+    <a href="https://huggingface.co/collections/lglg666/levo" style="margin-left: 0.5rem;"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue"></a>
   </div>
 </section>
 
@@ -83,10 +82,9 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified" style="font-size: 1.125rem; line-height: 1.7; font-family: 'Castoro', sans-serif;">
           <p>
-            🚀 We introduce <strong><a href="https://github.com/tencent-ailab/songgeneration" target="_blank" rel="noopener">LeVo 2</a></strong> (SongGeneration 2), an open-source foundation model achieving <strong>commercial-grade music generation</strong>. Through a <strong>large-scale expert evaluation</strong> (20 professionals, 6 dimensions, 100 songs per model), LeVo 2 is proven to <strong>outperform open-source baselines</strong> and <strong>rival commercial systems</strong> in Overall Quality, Melody, Arrangement, Sound Quality, and Structure, while matching many models in controllability assessments.<br>
-            🧠 LeVo 2 adopts a <strong>Hybrid LLM-Diffusion Architecture</strong>. The Language Model acts as the <strong>"Composer Brain"</strong>, orchestrating the global musical structure and performance logic (solving <em>how</em> to sing and play), while the Diffusion Model serves as the <strong>"High-Fidelity Renderer"</strong> to synthesize intricate acoustic details. At its core, we pioneer Hierarchical Representation Modeling to perfectly balance musicality with audio fidelity. Crucially, we utilize a <strong>Multi-Stage Progressive Post-Training</strong> strategy to explicitly align the LLM with both <strong>controllability standards and music aesthetics prior</strong>. This alignment process drastically enhances the model's controllability, effectively eliminates lyrical hallucinations, and ensures the generation of <strong>stable, structurally coherent, melodious music</strong>.<br>
-            🎧 We are thrilled to release the <strong><a href="https://huggingface.co/lglg666/SongGeneration-v2-large" target="_blank" rel="noopener">LeVo-v2-large</a></strong> and <strong><a href="" target="_blank" rel="noopener">LeVo-v2-medium (coming soon)</a></strong> models, which support <strong>multilingual lyrics</strong> and offer versatile control via <strong>text descriptions, audio prompts, and style presets</strong>. Designed for accessibility, it can run locally with 22GB VRAM (Large) and as little as 12GB VRAM (Medium).<br>
-            ⚡ For an immediate experience, we also provide the <strong>LeVo-v2-fast</strong> version on <a href="https://huggingface.co/spaces/tencent/SongGeneration" target="_blank" rel="noopener">HuggingFace Space</a>! You can now generate a complete song in <strong>under one minute</strong>, trading a slight loss in musicality for significantly faster generation speed.<br>
+            🚀 We introduce <strong><a href="https://github.com/levo-demo/LeVo" target="_blank" rel="noopener">LeVo 2</a></strong>, an open-source song generation framework for full-length music. Through a <strong>large-scale expert evaluation</strong> with 20 music professionals, covering 100 Chinese and 100 English songs per model across six subjective dimensions, LeVo 2 <strong>outperforms open-source baselines</strong> and <strong>approaches leading commercial systems</strong> on several listening metrics.<br>
+            🧠 LeVo 2 adopts a <strong>hybrid LLM-Diffusion framework</strong>. LeLM separates global semantic planning from track-specific acoustic refinement: a Mixed Semantic LM predicts mixed tokens for song-level structure, while a Track-Specific LM predicts vocal and accompaniment tokens in parallel conditioned on the global planner. A diffusion-based Music Codec then reconstructs the predicted tokens into full-length song waveforms. The main training contribution is a <strong>decoupled, aesthetics-guided strategy</strong>: pre-training assigns musicality-tier conditions, progressive post-training uses SFT, large-scale offline DPO, and closed-loop semi-online DPO to improve controllability and musicality, and modular extension refines track-specific acoustics.<br>
+            🎧 The released models support <strong>multilingual lyrics</strong> and controllable generation with <strong>text descriptions and audio prompts</strong>. Designed for accessibility, LeVo-v2-large can run locally with 22GB VRAM, and LeVo-v2-medium is planned for lower-memory deployment.<br>
           </p>
         </div>
 
@@ -1305,7 +1303,6 @@
         </table>
   </div>
 </section>
-
 
 
 
